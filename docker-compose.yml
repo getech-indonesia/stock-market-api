@@ -3,8 +3,8 @@ version: '3.8'
 services:
   stock_market_api:
     build:
-      context: .
-      target: prod
+      context: ./
+      dockerfile: Dockerfile
     restart: always
     container_name: stock_market_api
     environment:
