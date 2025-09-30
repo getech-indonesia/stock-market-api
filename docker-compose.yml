@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  stock_market_api:
+    build:
+      context: .
+      target: prod
+    restart: always
+    container_name: stock_market_api
+    environment:
+      - NODE_ENV=production # Ubah ke production
+    ports:
+      - "13000:3000"
