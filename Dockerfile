@@ -20,7 +20,7 @@ FROM base AS prod
 WORKDIR /var/www/html
 COPY --from=base /var/www/html/package.json .
 COPY --from=base /var/www/html/pnpm-lock.yaml .
-COPY --from=base /var/www/html/next.config.js ./
+COPY --from=base /var/www/html/next.config.ts ./
 COPY --from=base /var/www/html/public ./public
 COPY --from=base /var/www/html/.next ./.next
 ENTRYPOINT ["pnpm", "start"]
